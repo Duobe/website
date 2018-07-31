@@ -37828,7 +37828,8 @@ var Home = /** @class */function (_super) {
         return _this;
     }
     Home.prototype.render = function () {
-        return React.createElement("div", { className: 'home' }, React.createElement("header", null, React.createElement("div", { className: 'form' }, React.createElement("input", { type: "text", name: 'owner', defaultValue: this.state.owner, placeholder: 'owner', onChange: this.handleInputChange, autoComplete: 'off' }), React.createElement("input", { type: "text", name: 'repo', defaultValue: this.state.repo, placeholder: 'repo', onChange: this.handleInputChange, autoComplete: 'off' }), React.createElement("button", { onClick: this.handleSubmit }, "submit"))), React.createElement(_reactRouterDom.Switch, null, React.createElement(_reactRouterDom.Route, { path: "/issues", component: _Issues2.default }), React.createElement(_reactRouterDom.Route, { path: "/issue/:id", component: _Issue2.default }), React.createElement(_reactRouterDom.Route, { component: _NotFound2.default })));
+        var match = this.props.match;
+        return React.createElement("div", { className: 'home' }, React.createElement("header", null, React.createElement(_reactRouterDom.Link, { to: match.url + "issues" }, "Home"), React.createElement("div", { className: 'form' }, React.createElement("input", { type: "text", name: 'owner', defaultValue: this.state.owner, placeholder: 'owner', onChange: this.handleInputChange, autoComplete: 'off' }), React.createElement("input", { type: "text", name: 'repo', defaultValue: this.state.repo, placeholder: 'repo', onChange: this.handleInputChange, autoComplete: 'off' }), React.createElement("button", { onClick: this.handleSubmit }, "submit")), React.createElement("a", { href: "https://github.com/Duobe/website" }, "Github")), React.createElement("footer", null, React.createElement("p", null, "input owner and repository to view github issues. "), React.createElement("p", null, "Written by ", React.createElement("a", { href: 'https://github.com/Duobe' }, "Duobe"), ".")), React.createElement(_reactRouterDom.Route, null, React.createElement(_reactRouterDom.Switch, null, React.createElement(_reactRouterDom.Route, { path: "/issues", component: _Issues2.default }), React.createElement(_reactRouterDom.Route, { path: "/issue/:id", component: _Issue2.default }), React.createElement(_reactRouterDom.Route, { component: _NotFound2.default }))));
     };
     Home = __decorate([(0, _mobxReact.inject)('issueStore'), _mobxReact.observer], Home);
     return Home;
@@ -57621,7 +57622,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '13922' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '7672' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 

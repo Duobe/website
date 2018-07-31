@@ -1,7 +1,6 @@
 html,
 body,
-#root,
-.home {
+#root {
   height: 100%;
 }
 body {
@@ -10,7 +9,9 @@ body {
   font-family: "Source Sans Pro", "Arial", sans-serif, monospace, serif;
   font-size: 15px;
 }
-div {
+div,
+header,
+footer {
   box-sizing: border-box;
 }
 p {
@@ -32,9 +33,27 @@ a {
 .markdown-body > h1 {
   margin-top: 0;
 }
+.home {
+  position: relative;
+  padding-bottom: 60px;
+}
 .home header {
   height: 50px;
   background: #37649B;
+}
+.home header a {
+  position: absolute;
+  line-height: 50px;
+  top: 0;
+  right: 20px;
+  color: #fff;
+}
+.home header a:hover {
+  color: #bbb;
+}
+.home header a:first-child {
+  right: 90px;
+  z-index: 9;
 }
 .home header .form {
   position: relative;
@@ -61,6 +80,18 @@ a {
 }
 .home header button:hover {
   background: rgba(93, 153, 54, 0.9);
+}
+.home footer {
+  background: #37649B;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 99;
+}
+.home footer > p {
+  text-align: center;
+  color: #fff;
 }
 .list {
   position: relative;
@@ -147,7 +178,7 @@ a {
   float: left;
   margin-left: 20px;
 }
-@media (max-width: 350px) {
+@media (max-width: 470px) {
   .home header .form {
     top: -50px;
   }
