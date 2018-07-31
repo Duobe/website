@@ -1,0 +1,191 @@
+.home {
+  position: relative;
+  padding-bottom: 60px;
+  header {
+    height: 50px;
+    background: #37649B;
+    a {
+      position: absolute;
+      line-height: 50px;
+      top: 0;
+      right: 20px;
+      color: #fff;
+      &:hover {
+        color: #bbb;
+      }
+      &:first-child {
+        right: 90px;
+        z-index: 9;
+      }
+    }
+    .form {
+      position: relative;
+      top: 0;
+      transition: ease-in all 300ms;
+      white-space: nowrap;
+    }
+    input {
+      padding: 0 6px;
+      width: 100px;
+      height: 30px;
+      border: none;
+      border-radius: 2px;
+      margin: 10px;
+    }
+    button {
+      border: none;
+      color: #fff;
+      background: rgba(93, 153, 54, 1);
+      height: 30px;
+      border-radius: 2px;
+      cursor: pointer;
+      outline: none;
+      &:hover {
+        background: rgba(93, 153, 54, .9);
+      }
+    }
+  }
+  footer {
+    background: #37649B;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 99;
+    & > p {
+      text-align: center;
+      color: #fff;
+    }
+  }
+}
+
+.list {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 10px 45px;
+  .item {
+    position: relative;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: rgba(225, 225, 225, .2);
+    &:hover {
+      color: #111;
+      background: rgba(225, 225, 225, .4);
+    }
+    &>span {
+      color: #627682;
+      font-size: 12px;
+      margin-right: 4px;
+    }
+    &>label {
+      color: #B0BCC4;
+      font-size: 12px;
+      margin-left: 6px;
+    }
+    &>p {
+      margin-right: 10px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      line-height: 1.25;
+    }
+  }
+  .image-wrapper {
+    max-width: 400px;
+    margin-top: 14px;
+  }
+}
+
+.issues {
+  color: #444;
+}
+
+.issue {
+  .details {
+    height: 30px;
+    line-height: 30px;
+    &>label {
+      margin-right: 10px;
+      color: #bbb;
+    }
+  }
+}
+
+.pagination {
+  margin: 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  &>button {
+    background: #fff;
+    border: 1px solid #ededed;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 10px;
+    text-align: center;
+    cursor: pointer;
+    color: #ededed;
+    &:disabled {
+      cursor: not-allowed;
+      &:hover {
+        background: inherit;
+        color: #ededed;
+        border: 1px solid #ededed;
+      }
+    }
+    &:hover {
+      background: #f8f8f838;
+      color: #aaa;
+      border: 1px solid #aaa;
+    }
+  }
+  .pre {
+    float: left;
+  }
+  .next {
+    float: left;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 470px) {
+  .home header .form {
+    top: -50px;
+  }
+}
+
+@media (max-width: 575px) {
+  .list {
+    padding: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .markdown-body {
+    padding: 15px;
+  }
+  .issues {
+    position: static;
+    margin-left: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    &>a {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+  .labels {
+    position: static;
+    margin: 0 auto;
+    max-width: 100%;
+    padding-bottom: 0;
+    overflow: hidden;
+  }
+  .label {
+    float: left;
+    margin-right: 20px;
+  }
+}
