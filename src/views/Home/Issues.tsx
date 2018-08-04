@@ -96,10 +96,9 @@ class Issues extends React.Component<IIssuesProps, IIssuesState> {
 
   renderIssues() {
     return (
-      <div className='list'>
-        <div className='time-line'></div>
+      <div>
         {this.store.pageLoading ? <Spinner /> : (
-          <div>
+          <div className='list'>
             {this.renderIssue()}
             {this.reloadPage()}
           </div>
